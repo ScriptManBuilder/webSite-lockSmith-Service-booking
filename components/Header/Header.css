@@ -1,0 +1,80 @@
+/* Стили для хедера */
+header {
+  background-color: #93b0e5; /* Светло-серый фон */
+  color: white; 
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* Убедитесь, что родительские элементы имеют высоту 100% */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Стили для логотипа */
+header img.logo {
+  display: block;
+  margin: 0 auto;
+  width: 75px;  /* Размер логотипа */
+  height: 75px;
+  border-radius: 50%;  /* Делаем круг */
+  object-fit: cover;  /* Заполняем контейнер, обрезая лишнее */
+  border: 0.4px solid #FF0000; /* Красная обводка */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Тень */
+  overflow: hidden;  /* Скрываем все, что выходит за пределы круга */
+  background-color: #FF0000;  /* Красный фон */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Плавное изменение */
+  margin-bottom: -24px;
+}
+
+header img.logo:hover {
+  transform: scale(1.1);  /* Увеличение логотипа при наведении */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);  /* Усиление тени при наведении */
+}
+
+/* Навигационное меню */
+header nav {
+  margin-top: -20px;
+}
+
+/* Ссылки навигации */
+header nav a {
+  margin: 0 20px; /* Увеличенные отступы между ссылками */
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Плавный переход для цвета и анимации */
+}
+
+/* Эффект при наведении на ссылки */
+header nav a:hover {
+  text-decoration: underline;
+  color: #FFD700; /* Желтый цвет при наведении */
+  transform: scale(1.05); /* Легкое увеличение размера при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem; /* Уменьшаем отступы для мобильных устройств */
+  }
+
+  header nav a {
+    margin: 0 10px; /* Уменьшаем отступы между ссылками */
+    font-size: 0.9rem; /* Уменьшаем размер шрифта */
+  }
+
+  /* Уменьшаем размер логотипа для мобильных устройств */
+  header img.logo {
+    height: 80px; /* Увеличиваем размер логотипа для мобильных устройств */
+    width: 80px; /* Поддерживаем соотношение */
+  }
+}

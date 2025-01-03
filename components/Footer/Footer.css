@@ -1,0 +1,76 @@
+/* Стили для футера */
+#footer {
+    background-color:#0c1d41;
+    color: white; /* Белый текст */
+    padding: 20px 0; /* Отступы */
+    font-size: 0.9rem; /* Размер шрифта */
+    text-align: center;
+  }
+  
+  /* Контент футера */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Логотип футера */
+  .footer-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Ссылки футера */
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Цвет при наведении */
+  }
+  
+  /* Контакты футера */
+  .footer-contact p {
+    margin: 5px 0;
+  }
+  
+  /* Нижняя часть футера */
+  .footer-bottom {
+    background-color: #150e31; /* Более темный фон для нижней части */
+    padding: 10px 0;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+    color: #bbb;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-links ul {
+      margin: 10px 0;
+    }
+  }
+  

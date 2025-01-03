@@ -1,0 +1,91 @@
+
+/* Добавьте этот код в index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* Применяем шрифты ко всему сайту */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f4f4f4; /* Светлый фон для улучшения контраста */
+  color: #333; /* Темный цвет текста */
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  color: #222;
+}
+
+
+/* Использование шрифта Lora для цитат или выделенных текстов */
+blockquote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  margin: 16px 0;
+}
+
+
+/*
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+
+#about-us {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+#about-us h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+#about-us p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+*/
