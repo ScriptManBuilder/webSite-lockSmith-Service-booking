@@ -1,0 +1,116 @@
+/* Стили для хедера */
+header {
+    background: linear-gradient(135deg, #6f96df, #5f76b9); /* Градиентный фон с яркими синими оттенками */
+  
+  
+    color: white; 
+    padding: 1rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Мягкая тень */
+    top: 0;
+    z-index: 1000;
+  
+    width: 100%;
+  }
+  
+  /* Убедитесь, что родительские элементы имеют высоту 100% */
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Стили для логотипа */
+  header img.logo {
+    display: block;
+    margin: 0 auto;
+    width: 75px; /* Размер логотипа */
+    height: 75px;
+    border-radius: 50%; /* Делаем круг */
+    object-fit: cover; /* Заполняем контейнер, обрезая лишнее */
+    border: 0.4px solid #FF0000; /* Красная обводка */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+    overflow: hidden; /* Скрываем все, что выходит за пределы круга */
+    background-color: #FF0000; /* Красный фон */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, rotate 0.4s ease; /* Плавное изменение */
+    margin-bottom: -24px;
+  }
+  
+  header img.logo:hover {
+    transform: scale(1.1) rotate(15deg); /* Логотип увеличивается и немного поворачивается */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Усиление тени при наведении */
+  }
+  
+  /* Стили для навигационного меню */
+  header nav {
+    margin-top: -20px;
+    display: flex; /* Горизонтальное расположение */
+    justify-content: center;
+  }
+  
+  /* Ссылки навигации */
+  header nav a {
+    margin: 0 20px; /* Увеличенные отступы между ссылками */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Увеличиваем размер шрифта */
+    font-weight: 600; /* Жирное начертание */
+    position: relative; /* Для работы с псевдоэлементом */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавный переход для цвета и анимации */
+  }
+  
+  /* Линия под ссылкой */
+  header nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700; /* Желтая линия */
+    transition: width 0.3s ease; /* Плавное расширение линии */
+    position: absolute;
+    bottom: -5px; /* Размещаем линию ниже текста */
+    left: 0;
+  }
+  
+  /* Эффект при наведении на ссылки */
+  header nav a:hover {
+    color: #FFD700; /* Цвет текста при наведении */
+    transform: scale(1.05); /* Легкое увеличение ссылки */
+  }
+  
+  header nav a:hover::after {
+    width: 100%; /* Линия расширяется на всю ширину ссылки */
+  }
+  
+  /* Активная ссылка */
+  header nav a.active {
+    color: #FFD700; /* Желтый цвет для активной ссылки */
+    font-weight: bold; /* Жирный шрифт для активной ссылки */
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    header {
+      padding: 1rem; /* Уменьшаем отступы для мобильных устройств */
+    }
+  
+    header nav a {
+      margin: 0 10px; /* Уменьшаем отступы между ссылками */
+      font-size: 1rem; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+  
+    /* Уменьшаем размер логотипа для мобильных устройств */
+    header img.logo {
+      height: 80px;
+      width: 80px;
+    }
+  
+    /* Меню становится вертикальным на мобильных устройствах */
+    header nav {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
+  

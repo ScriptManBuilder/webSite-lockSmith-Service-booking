@@ -1,0 +1,163 @@
+/* Основные стили */
+.hero {
+    background-position: center;
+    background-size: cover; /* Сжимаем изображение, сохраняя пропорции */
+    background-repeat: no-repeat;
+    background-color: #000; /* Фоновый цвет, если изображение не загружено */
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    height: 80vh; /* Высота секции уменьшена */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 5px solid #ff9900; /* Добавим нижнюю границу для секции */
+    background-attachment: fixed; /* Эффект параллакса */
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    color: #f4f4f4; /* Мягкий цвет текста */
+    font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 90%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Легкая тень для выделения текста */
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    color: #e0e0e0; /* Мягкий цвет текста для абзаца */
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-family: 'Lora', serif; /* Шрифт Lora для абзаца */
+    font-style: italic; /* Итальянский стиль текста */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Легкая тень для абзаца */
+  }
+  
+  .cta-button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cta-button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+  }
+  
+  .cta-button:focus {
+    outline: none;
+  }
+  
+  .benefits, .services, .service-areas, .contact {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .benefits h2, .services h2, .service-areas h2, .contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .benefits ul, .services ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .benefits li, .services li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .benefits li:before {
+    content: "✔";
+    color: #ff9900;
+    margin-right: 10px;
+  }
+  
+  .service-areas p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  .contact p {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .contact-button2 {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button2:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+  }
+  
+  .contact-button2:focus {
+    outline: none;
+  }
+  
+  /* Мобильные стили */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 80px 20px;
+      height: 60vh; /* Уменьшаем высоту для мобильных */
+      background-attachment: scroll; /* Отключаем параллакс для мобильных */
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.1rem;
+    }
+  
+    .cta-button {
+      padding: 12px 25px;
+      font-size: 1.3rem;
+    }
+  
+    .benefits ul, .services ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-button2 {
+      padding: 12px 25px;
+      font-size: 1.3rem;
+    }
+  }
+  

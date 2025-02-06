@@ -1,0 +1,329 @@
+/* Подключение шрифтов из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Поменял шрифт на Poppins */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* AirDuctCleaning Page Specific Styles */
+.airduct-cleaning-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Image Container for Two Images */
+.airduct-cleaning-container .image-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.airduct-cleaning-container .image-section .image {
+  width: 48%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Анимация для увеличения, тени и прозрачности */
+  transform-origin: center center; /* Центрируем трансформацию */
+}
+
+.airduct-cleaning-container .image-section .image:hover {
+  transform: scale(1.1) rotate(5deg); /* Добавляем вращение */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Более выраженная тень */
+  opacity: 0.9; /* Немного уменьшили прозрачность для акцента */
+}
+
+/* Main Content */
+.airduct-cleaning-container .content {
+  padding: 40px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Анимация появления */
+}
+
+.airduct-cleaning-container .content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #2a2a2a;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: color 0.3s ease; /* Плавная анимация для заголовка */
+}
+
+.airduct-cleaning-container .content h1:hover {
+  color: #1a73e8; /* Меняем цвет при наведении */
+}
+
+/* Key Word Highlight */
+.airduct-cleaning-container .content strong {
+  color: #1a73e8;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+  transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.airduct-cleaning-container .content strong:hover {
+  transform: scale(1.1); /* Увеличиваем ключевые слова */
+}
+
+/* Main Text */
+.airduct-cleaning-container .content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 0.5s; /* Задержка для текста */
+}
+
+/* Section with Background */
+.airduct-cleaning-container .section-background {
+  background-color: #f9f9f9;
+  padding: 40px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для изображения с текстом */
+.airduct-cleaning-container .image-container {
+  position: relative;
+  text-align: center;
+  margin: 30px 0;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out; /* Плавная анимация */
+}
+
+/* Фоновое изображение */
+.airduct-cleaning-container .image-container .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 1s ease-in-out; /* Анимация фона */
+}
+
+.airduct-cleaning-container .image-container:hover .image {
+  transform: scale(1.2); /* Увеличение фона при наведении */
+}
+
+/* Текст на фоне */
+.airduct-cleaning-container .image-container .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 0.5s; /* Анимация текста */
+}
+
+/* Эффект параллакса */
+.airduct-cleaning-container .parallax-background {
+  background-image: url("../../assets/airduct-cleaning2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.airduct-cleaning-container .parallax-background h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInText 2s forwards; /* Плавное появление параллакса */
+}
+
+.airduct-cleaning-container .section-background h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 1s; /* Задержка анимации */
+}
+
+/* Call to Action */
+.airduct-cleaning-container .call-button {
+  background: linear-gradient(45deg, #1a73e8, #4285f4); /* Градиентный фон */
+  color: white;
+  font-size: 1.5rem; /* Увеличенный размер шрифта для выделения */
+  padding: 16px 30px; /* Увеличенные отступы для лучшего восприятия */
+  border: none;
+  border-radius: 50px; /* Округлая форма кнопки */
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase; /* Текст в верхнем регистре для более современного вида */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Легкая тень для кнопки */
+}
+
+.airduct-cleaning-container .call-button:hover {
+  background: linear-gradient(45deg, #155a8a, #3367d6); /* Градиент при наведении */
+  transform: scale(1.1) rotate(2deg); /* Увеличение и легкое вращение */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+.airduct-cleaning-container .call-button:active {
+  transform: scale(0.98); /* Легкое уменьшение при клике */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Возвращение тени нажатия */
+}
+
+
+/* Footer */
+.airduct-cleaning-container .footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.airduct-cleaning-container .footer p {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .airduct-cleaning-container .image-container .image {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .airduct-cleaning-container .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .airduct-cleaning-container .section-background {
+    padding: 20px;
+  }
+
+  .airduct-cleaning-container .section-background h2 {
+    font-size: 1.8rem;
+  }
+
+  .airduct-cleaning-container .section-background li {
+    font-size: 1rem;
+  }
+
+  .airduct-cleaning-container .call-button {
+    font-size: 1rem;
+  }
+
+  /* Мобильный стиль для двух изображений */
+  .airduct-cleaning-container .image-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .airduct-cleaning-container .image-section .image {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Анимация для появления элементов */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Контейнер для изображений */
+.airduct-cleaning-container .images-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Это гарантирует, что изображения не будут выходить за пределы контейнера на маленьких экранах */
+}
+
+/* Каждый блок с изображением и текстом */
+.airduct-cleaning-container .image-with-text {
+  display: flex; /* Используем флекс для размещения элементов в строку */
+  justify-content: flex-start; /* Размещение изображений слева */
+  align-items: center; /* Центрируем элементы по вертикали */
+  margin: 30px 0;
+  width: 50%;
+}
+
+/* Изображение */
+.airduct-cleaning-container .image-with-text .image {
+  width: 40%; /* Фиксированная ширина для изображения */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-right: 20px; /* Добавляем отступ справа от изображения */
+  transition: transform 0.5s ease, opacity 0.3s ease; /* Плавный переход для увеличения и прозрачности */
+}
+
+/* Эффект при наведении на изображение */
+.airduct-cleaning-container .image-with-text .image:hover {
+  transform: scale(1.1) rotate(10deg); /* Более выраженное увеличение и вращение */
+  opacity: 0.85; /* Уменьшение прозрачности для эффекта */
+}
+
+/* Текстовое наложение (справа от изображения) */
+.airduct-cleaning-container .image-with-text .text-overlay {
+  color: #333; /* Цвет текста (темно-серый для лучшего контраста) */
+  font-size: 1.2rem; /* Размер шрифта */
+  font-weight: bold;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Умеренная тень для контраста */
+  text-align: left; /* Текст выровнен по левому краю */
+  max-width: 55%; /* Ограничиваем ширину текста */
+  transition: opacity 0.3s ease; /* Плавный переход для текста */
+  line-height: 1.6; /* Добавляем межстрочный интервал для лучшей читаемости */
+}
+
+/* Эффект при наведении на блок с изображением */
+.airduct-cleaning-container .image-with-text:hover .text-overlay {
+  opacity: 1; /* При наведении текст будет ярче */
+}

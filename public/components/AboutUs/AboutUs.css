@@ -1,0 +1,397 @@
+/* About Us Section Styles */
+#about-us {
+  background: linear-gradient(135deg, #f0f0f0, #d6eaf8); /* Gradient background for depth */
+  padding: 60px 40px; /* More spacious feel with ample padding */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin: 50px auto;
+  max-width: 1200px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Modern and stylish font */
+  position: relative;
+}
+
+#about-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #e63946; /* Accent color */
+  border-radius: 20px 20px 0 0;
+}
+
+#about-us h2 {
+  font-size: 3.5rem; /* Larger, more impactful header */
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700; /* Bold and striking header */
+  text-transform: uppercase; /* Make the header stand out */
+  letter-spacing: 2px; /* Wider spacing for emphasis */
+  line-height: 1.3;
+}
+
+#about-us .content {
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align content for better balance */
+  gap: 40px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+#about-us .content p {
+  font-size: 3.35rem !important;
+  color: #444;
+  line-height: 1.7;
+  max-width: 650px;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto 25px;
+  padding: 0 10px;
+}
+
+#about-us .left-column,
+#about-us .right-column {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff; /* White background for sections */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+#about-us .left-column::after,
+#about-us .right-column::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 50%;
+  height: 3px;
+  background-color: #e63946; /* Add color accent to column bottom */
+}
+
+#about-us .left-column {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#about-us .right-column {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#about-us .left-column:hover,
+#about-us .right-column:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+  #about-us {
+    padding: 40px 20px;
+    margin: 30px auto;
+  }
+
+  #about-us h2 {
+    font-size: 2.5rem; /* Smaller header on mobile */
+  }
+
+  #about-us .content {
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: center; /* Center content */
+  }
+
+  #about-us .content p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  #about-us .left-column,
+  #about-us .right-column {
+    min-width: 100%;
+    padding: 20px 10px;
+  }
+}
+/* Styles for the Cards Section */
+#cards {
+  background-color: #f4f4f4; /* Slightly lighter background for a modern touch */
+  padding: 15px 15px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+  margin-top: 30px;
+}
+
+#cards h2 {
+  font-size: 3rem; /* Larger header */
+  color: #333;
+  margin-bottom: 3px;
+  text-align: center;
+  font-weight: 700; /* Bold for emphasis */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card Container */
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Flexibility for different screen sizes */
+  gap: 20px; /* Increase gap for spaciousness */
+  justify-items: center;
+  margin-top: 2px;
+}
+
+/* Styles for Each Card */
+.card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* Deeper shadow for emphasis */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  max-width: 360px;
+  width: 100%;
+  border: 1px solid #ddd; /* Light border to define edges */
+}
+
+.card:hover {
+  transform: translateY(-12px); /* Stronger hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More intense shadow */
+  background-color: #f0f8ff; /* Light background change on hover */
+}
+
+.card i {
+  font-size: 50px; /* Larger icon size */
+  color: #333;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.card:hover i {
+  color: #007bff; /* Blue color on hover for better emphasis */
+}
+
+.card h3 {
+  font-size: 1.7rem; /* Slightly larger heading */
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: capitalize; /* Capitalize headings for clarity */
+}
+
+.card p {
+  font-size: 1.1rem; /* Slightly larger paragraph text */
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+  padding: 0 10px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  #cards {
+    padding: 20px;
+  }
+
+  #cards h2 {
+    font-size: 2.5rem; /* Smaller header on mobile */
+  }
+
+  .card {
+    padding: 20px; /* Reduced padding for smaller screens */
+    max-width: 100%; /* Cards take full width on small screens */
+  }
+
+  .services-cards {
+    gap: 15px; /* Reduced gap on mobile */
+  }
+}
+
+
+/* Стили для верхнего баннера */
+#top-rated-service {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 2px 0;
+}
+
+.service-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin-bottom: 2px;
+}
+
+.service-banner h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.service-banner h1 .highlight {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.service-banner .service-info {
+  margin-bottom: 2px;
+  color: #777;
+  font-size: 1rem;
+}
+
+.service-info i {
+  margin-right: 8px;
+  color: #e63946;
+}
+
+.call-now-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.call-now-button:hover {
+  background-color: #b02d3c;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+  .service-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  #about-us {
+    padding: 2px;
+  }
+
+  #cards {
+    padding: 20px;
+  }
+
+  .services-cards {
+    grid-template-columns: 1fr; /* На мобильных устройствах карточки в одну колонку */
+  }
+
+  .call-now-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+/* Стили для секции приветствия */
+#welcome {
+  background-color: #e9f7fe;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#welcome h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#welcome p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+#welcome strong {
+  font-weight: bold;
+  color: #e63946;
+}
+
+#welcome .welcome-banner {
+  max-width: 100%;
+}
+/* Стили для анимации слов */
+.word {
+  opacity: 0;
+  display: inline-block;
+  margin-right: 10px; /* Добавление отступа между словами */
+  animation: fadeIn 1s forwards;
+}
+
+#word1 {
+  animation-delay: 0s;
+}
+#word2 {
+  animation-delay: 1s;
+}
+#word3 {
+  animation-delay: 2s;
+}
+#word4 {
+  animation-delay: 3s;
+}
+
+/* Анимация для появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Анимация для дополнительного текста */
+#additional-text {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 4s; /* Задержка появления */
+}
+.custom-page strong {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #140505; /* Fallback color */
+  background: linear-gradient(135deg, #140505, #e63946); /* Gradient background */
+  
+  /* Apply background clipping to text */
+  -webkit-background-clip: text; /* Safari, Chrome */
+  -moz-background-clip: text; /* Mozilla Firefox (not always needed) */
+  -ms-background-clip: text; /* Microsoft Edge (old versions) */
+  -o-background-clip: text; /* Opera (older versions) */
+  background-clip: text; /* Standard property */
+
+  color: transparent; /* Make the text transparent to show the gradient */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Light shadow for better visibility */
+  letter-spacing: 0.5px; /* Slightly increase letter spacing */
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.custom-page strong:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* More intense shadow on hover */
+}
+
+
+.city {
+  font-weight: 500; /* Немного жирный шрифт */
+  color: #007BFF; /* Небольшой акцент синим цветом */
+}

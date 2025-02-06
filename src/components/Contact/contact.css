@@ -1,0 +1,203 @@
+/* Стиль для страницы Contact */
+.contact-page {
+
+  text-align: center;
+  background-color: #f4f4f9;
+}
+
+/* Контейнер для контактной информации */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Контактные кнопки */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Стиль для каждой кнопки */
+.contact-button {
+  padding: 12px 25px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимация для кнопок */
+.contact-button:hover {
+  background-color: #36c3c4;
+  transform: translateY(-5px) scale(1.1); /* Увеличиваем и поднимаем кнопку */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: pulse 1s infinite; /* Пульсация */
+}
+
+.contact-button:active {
+  transform: scale(0.95); /* Немного уменьшить при нажатии */
+}
+
+/* Эффект пульсации */
+@keyframes pulse {
+  0% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.15);
+  }
+  100% {
+    transform: translateY(-5px) scale(1.1);
+  }
+}
+
+/* Контейнер для окна чата */
+.chat-container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Окно чата */
+.chat-window {
+  height: 300px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Сообщения в чате */
+.chat-message {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 15px;
+  max-width: 75%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+  background-color: #c34a36;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.operator-message {
+  background-color: #36c3c4;
+  color: white;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* Форма для ввода сообщений */
+.chat-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.chat-input {
+  width: 80%;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #e8e8e8;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.chat-input:focus {
+  box-shadow: 0 0 5px #36c3c4;
+  background-color: #ffffff;
+}
+
+/* Кнопка отправки чата */
+.chat-send-button {
+  padding: 10px 20px;
+  background-color: #36c3c4;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-send-button:hover {
+  background-color: #2da0a0;
+  transform: scale(1.05);
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-button {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .chat-container {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .chat-input {
+    width: 70%;
+  }
+
+  .chat-send-button {
+    font-size: 0.9rem;
+  }
+}
+.operator-avatar {
+  width: 40px; /* Ширина аватарки */
+  height: 40px; /* Высота аватарки */
+  border-radius: 50%; /* Круглая форма */
+  margin-right: 10px; /* Отступ справа от текста */
+  object-fit: cover; /* Подгонка изображения */
+  vertical-align: middle; /* Выравнивание с текстом */
+}
+.operator-message {
+  display: flex; /* Для размещения аватарки и текста в одной строке */
+  align-items: center;
+}

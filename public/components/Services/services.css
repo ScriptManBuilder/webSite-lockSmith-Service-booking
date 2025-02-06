@@ -1,0 +1,304 @@
+/* Общий стиль для страницы */
+.services-container {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.services-title {
+  font-size: 40px;
+  color: #1a237e;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.service-card {
+  width: 250px; /* Установите фиксированную ширину */
+  height: 350px; /* Установите фиксированную высоту */
+
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: transform 1.2s ease-in-out, box-shadow 1.2s ease-in-out, background-color 1.2s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: scale(1.25) rotateY(360deg); /* Увеличение и переворот карточки */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  background-color: #e8f5fe; /* Легкий оттенок при наведении */
+}
+
+.service-icon {
+  font-size: 48px;
+  color: #3949ab;
+  margin-bottom: 20px;
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.service-card:hover .service-icon {
+  color: #1e88e5; /* Изменяем цвет иконки при наведении */
+}
+
+.service-title {
+  font-size: 26px;
+  color: #212121;
+  margin: 15px 0;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.service-card:hover .service-title {
+  color: #0d47a1; /* Изменяем цвет заголовка при наведении */
+}
+
+.service-description  {
+  font-size: 18px;
+  color: #616161;
+  line-height: 1.6;
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.service-card:hover .service-description {
+  color: #37474f; /* Изменяем цвет описания при наведении */
+}
+/* Default hidden extra description */
+.service-card .extra-description {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  color: #616161;
+  line-height: 1.6;
+  transition: opacity 0.3s ease 1.2s, visibility 0s linear 1.5s, color 0.3s ease; /* Transition for opacity and color */
+}
+
+/* Show extra description on hover */
+.service-card:hover .extra-description {
+  opacity: 1;
+  visibility: visible;
+  color: #37474f; /* Change color when hovering */
+  transition-delay: 0s; /* No delay for visibility when hovering */
+}
+/* Default hidden extra description */
+.service-card .extra-description {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease 1.2s, visibility 0s linear 1.5s; /* 1.2s delay for opacity, 1.5s for visibility */
+}
+
+/* Show extra description on hover */
+.service-card:hover .extra-description {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s; /* No delay for visibility when hovering */
+}
+
+
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 30px 15px;
+  }
+
+  .services-title {
+    font-size: 32px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+}
+.why-choose-us {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.why-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1a237e;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.why-icon {
+  font-size: 28px;
+  color: #3949ab;
+  margin-right: 12px;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #424242;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.why-list li p {
+  margin: 0;
+}
+
+.advantages-container {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #e8f5e9;
+  border-radius: 12px;
+}
+
+.advantages-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2e7d32;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+}
+
+.advantage-card {
+  width: 260px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-icon {
+  font-size: 36px;
+  color: #43a047;
+  margin-bottom: 15px;
+}
+
+.advantage-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1b5e20;
+  margin-bottom: 12px;
+}
+
+.advantage-description {
+  font-size: 16px;
+  color: #424242;
+  line-height: 1.5;
+}
+
+.city {
+  font-weight: 500; /* Немного жирный шрифт */
+  color: #007BFF; /* Небольшой акцент синим цветом */
+}
+.reviews-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.reviews-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.review-name-rating {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-name {
+  font-weight: bold;
+}
+
+.review-stars {
+  display: flex;
+}
+
+.star {
+  color: #ffd700;
+  margin-right: 5px;
+}
+
+.review-text {
+  margin-top: 15px;
+  font-style: italic;
+}
+.reviews-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1a237e;
+}

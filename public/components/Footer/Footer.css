@@ -1,0 +1,152 @@
+/* Стили для футера */
+#footer {
+  background: linear-gradient(180deg, #0c1d41, #0a1734); /* Градиентный фон */
+  color: white;
+  padding: 10px 0;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Контент футера */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Логотип футера */
+.footer-logo img {
+  width: 15;
+  height: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid transparent;
+  background: linear-gradient(45deg, #FFD700, #ff8800);
+  padding: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Ссылки футера */
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease-in-out;
+  margin-top: 3px;
+}
+
+.footer-links a:hover {
+  color: #FFD700;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Контакты футера */
+.footer-contact {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row; /* Изменим на строку */
+  justify-content: center; /* Центрируем элементы */
+  gap: 20px; /* Увеличим промежутки между элементами */
+}
+
+/* Оформление контактов в виде карточек */
+.footer-contact p {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease-in-out;
+}
+
+.footer-contact p:hover {
+  background: rgba(255, 215, 0, 0.2);
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #FFD700;
+}
+
+
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: #FFD700;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+  background-color: #150e31;
+  padding: 5px 0;
+  margin-top: 5px;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-links ul {
+      margin: 15px 0;
+  }
+  .footer-links li {
+      display: block;
+      margin: 10px 0;
+  }
+  .footer-contact p {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}
