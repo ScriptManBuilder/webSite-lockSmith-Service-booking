@@ -215,31 +215,38 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .airduct-cleaning-container .image-container .image {
-    width: 80%;
+    width: 100%; /* Оставляем изображение в нормальном размере */
+    max-width: 300px; /* Ограничиваем максимальную ширину для предотвращения растяжения */
     margin-bottom: 20px;
   }
 
   .airduct-cleaning-container .content h1 {
-    font-size: 2.2rem;
+    font-size: 1.6rem; /* Уменьшаем размер текста */
+    line-height: 1.4; /* Добавляем интерлиньяж для улучшения читабельности */
+    text-align: center; /* Центруем текст */
   }
 
   .airduct-cleaning-container .section-background {
-    padding: 20px;
+    padding: 15px; /* Уменьшаем внутренние отступы */
   }
 
   .airduct-cleaning-container .section-background h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* Уменьшаем заголовки */
+    text-align: center;
   }
 
   .airduct-cleaning-container .section-background li {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Делаем список более компактным */
+    line-height: 1.5;
   }
 
   .airduct-cleaning-container .call-button {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 10px 15px; /* Добавляем компактные кнопки */
   }
 
   /* Мобильный стиль для двух изображений */
@@ -249,8 +256,9 @@ body {
   }
 
   .airduct-cleaning-container .image-section .image {
-    width: 90%;
-    margin-bottom: 20px;
+    width: 80%; /* Сохраняем разумный размер изображения */
+    max-width: 250px;
+    margin-bottom: 15px;
   }
 }
 
@@ -277,53 +285,90 @@ body {
   }
 }
 
-/* Контейнер для изображений */
+/* Общий стиль для контейнера */
 .airduct-cleaning-container .images-container {
   display: flex;
   justify-content: space-between;
   gap: 1px;
   margin-top: 40px;
-  flex-wrap: wrap; /* Это гарантирует, что изображения не будут выходить за пределы контейнера на маленьких экранах */
+  flex-wrap: wrap; /* Обеспечивает перенос изображений на новые строки */
 }
 
 /* Каждый блок с изображением и текстом */
 .airduct-cleaning-container .image-with-text {
-  display: flex; /* Используем флекс для размещения элементов в строку */
-  justify-content: flex-start; /* Размещение изображений слева */
-  align-items: center; /* Центрируем элементы по вертикали */
-  margin: 30px 0;
-  width: 50%;
+  display: flex;
+  flex-direction: row; /* По умолчанию изображение и текст в строку */
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+  width: 48%; /* На больших экранах два блока в строке */
+  box-sizing: border-box; /* Учитываем отступы в ширине */
 }
 
 /* Изображение */
 .airduct-cleaning-container .image-with-text .image {
-  width: 40%; /* Фиксированная ширина для изображения */
+  width: 40%; /* Изображение занимает 40% ширины блока */
   height: auto;
-  display: block;
   border-radius: 8px;
-  margin-right: 20px; /* Добавляем отступ справа от изображения */
-  transition: transform 0.5s ease, opacity 0.3s ease; /* Плавный переход для увеличения и прозрачности */
+  margin-right: 20px;
+  transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
+/* Текстовое наложение */
+.airduct-cleaning-container .image-with-text .text-overlay {
+  color: #333;
+  font-size: 1rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  max-width: 55%; /* Ограничиваем ширину текста */
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+}
 /* Эффект при наведении на изображение */
 .airduct-cleaning-container .image-with-text .image:hover {
-  transform: scale(1.1) rotate(10deg); /* Более выраженное увеличение и вращение */
-  opacity: 0.85; /* Уменьшение прозрачности для эффекта */
+  transform: scale(1.1) rotate(10deg); /* Увеличение и вращение */
+  opacity: 0.85; /* Снижение прозрачности */
+}
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  /* На планшетах */
+  .airduct-cleaning-container .image-with-text {
+    width: 100%; /* Блоки занимают всю ширину */
+    flex-direction: row; /* Остаются в строку */
+    margin: 20px 0;
+  }
+
+  .airduct-cleaning-container .image-with-text .image {
+    width: 35%; /* Уменьшаем изображение для компактности */
+    margin-right: 10px;
+  }
+
+  .airduct-cleaning-container .image-with-text .text-overlay {
+    font-size: 0.9rem; /* Уменьшаем размер текста */
+    max-width: 60%;
+  }
 }
 
-/* Текстовое наложение (справа от изображения) */
-.airduct-cleaning-container .image-with-text .text-overlay {
-  color: #333; /* Цвет текста (темно-серый для лучшего контраста) */
-  font-size: 1.2rem; /* Размер шрифта */
-  font-weight: bold;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Умеренная тень для контраста */
-  text-align: left; /* Текст выровнен по левому краю */
-  max-width: 55%; /* Ограничиваем ширину текста */
-  transition: opacity 0.3s ease; /* Плавный переход для текста */
-  line-height: 1.6; /* Добавляем межстрочный интервал для лучшей читаемости */
-}
+@media (max-width: 480px) {
+  /* На мобильных устройствах */
+  .airduct-cleaning-container .image-with-text {
+    flex-direction: column; /* Изображение и текст в колонку */
+    align-items: flex-start; /* Выравниваем элементы по началу */
+    width: 100%; /* Занимают всю ширину */
+  }
 
-/* Эффект при наведении на блок с изображением */
-.airduct-cleaning-container .image-with-text:hover .text-overlay {
-  opacity: 1; /* При наведении текст будет ярче */
+  .airduct-cleaning-container .image-with-text .image {
+    width: 100%; /* Изображение на всю ширину */
+    margin-right: 0;
+    margin-bottom: 10px; /* Отступ снизу */
+  }
+
+  .airduct-cleaning-container .image-with-text .text-overlay {
+    font-size: 0.85rem; /* Еще немного уменьшаем текст */
+    max-width: 100%; /* Текст занимает всю ширину */
+  }
+  .airduct-cleaning-container .image-with-text .image:hover {
+    transform: scale(1.05) rotate(5deg); /* Более мягкий эффект на мобильных */
+    opacity: 0.9; /* Немного более яркий эффект */
+  }
 }
