@@ -5,12 +5,12 @@ import BookNow from "./components/BookNow/BookNow";
 import Services from "./components/Services/services";
 import PrivacyPolice from "./components/PrivacyPolice/privacy";
 import Contact from "./components/Contact/contact";
-import GoogleAnalytics from './utilites/GoogleAnalytics';
+//import GoogleAnalytics from './utilites/GoogleAnalytics';
 import AirDuctCleaning from "./components/AirDuctCleaning/AirDuctCleaning";
 
 function App() {
   useEffect(() => {
-    GoogleAnalytics();
+   // GoogleAnalytics();
   }, []);
 
   return (

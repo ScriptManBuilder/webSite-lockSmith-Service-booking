@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer"; // Импортируем Footer
 import './contact.css'; // Стили для Contact
 import avaterOperatort from "../../assets/avaterOperatort.jpg";  // Adjust path if necessary
 import { Helmet } from 'react-helmet';  // Импортируем Helmet для добавления метатегов
-import GoogleAnalytics from '../../utilites/GoogleAnalytics'; //  GoogleAnalytics(); 
+//import GoogleAnalytics from '../../utilites/GoogleAnalytics'; //  GoogleAnalytics(); 
 
 const SEO = () => {
   return (
@@ -14,14 +14,23 @@ const SEO = () => {
       <meta name="keywords" content="locksmith, contact us, emergency services, key duplication, car unlock, lock repair, locksmith service" /> {/* Ключевые слова */}
       <meta name="robots" content="index, follow" /> {/* Инструкция для поисковых систем */}
 
-     
+      {/* Google tag (gtag.js) */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16740926008"></script>
+  <script>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16740926008');
+    `}
+  </script>
     </Helmet>
   );
 };
 
 const Contact = () => {
   useEffect(() => {
-    GoogleAnalytics(); // Вызов функции при монтировании компонента
+    //GoogleAnalytics(); // Вызов функции при монтировании компонента
   }, []);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');

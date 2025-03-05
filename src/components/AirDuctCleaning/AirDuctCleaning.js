@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import NewHeader from "../NewHeader/NewHeader";
 import Footer from "../Footer/Footer";
-import GoogleAnalytics from "../../utilites/GoogleAnalytics";
+//import GoogleAnalytics from "../../utilites/GoogleAnalytics";
 import "./AirDuctCleaning.css";
 import airductCleaningImage from "../../assets/airduct-cleaning4.jpg";
 import airductCleaningImage1 from "../../assets/airduct-cleaning3.jpg";
@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const AirDuctCleaning = () => {
   useEffect(() => {
-    GoogleAnalytics();
+   // GoogleAnalytics();
   }, []);
 
   return (
@@ -21,6 +21,16 @@ const AirDuctCleaning = () => {
           name="description"
           content="MP PLUS offers expert air duct cleaning services in Boise and nearby areas. Improve air quality and HVAC efficiency today!"
         />
+         {/* Google tag (gtag.js) */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16740926008"></script>
+  <script>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16740926008');
+    `}
+  </script>
       </Helmet>
       <NewHeader />
 

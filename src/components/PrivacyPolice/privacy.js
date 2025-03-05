@@ -16,6 +16,16 @@ const SEO = () => {
         content="privacy policy, personal data, locksmith services, data protection, rights, MP Plus Locksmith"
       /> {/* Ключевые слова */}
       <meta name="robots" content="index, follow" /> {/* Инструкция для поисковых систем */}
+       {/* Google tag (gtag.js) */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16740926008"></script>
+  <script>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16740926008');
+    `}
+  </script>
     </Helmet>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";  // Импортируем Helmet
 import "./AboutUs.css";
-import GoogleAnalytics from '../../utilites/GoogleAnalytics'; //  GoogleAnalytics(); 
+//import GoogleAnalytics from '../../utilites/GoogleAnalytics'; //  GoogleAnalytics(); 
 import { Link } from "react-router-dom";
 
 
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   useEffect(() => {
-    GoogleAnalytics(); // Вызов функции при монтировании компонента
+    //GoogleAnalytics(); // Вызов функции при монтировании компонента
   }, []);
   const phrases = [
     "Licensed, Bonded, and Insured",
@@ -91,7 +91,16 @@ function AboutUs() {
     `}
   </script>
 
-  
+   {/* Google tag (gtag.js) */}
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16740926008"></script>
+  <script>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16740926008');
+    `}
+  </script>
 </Helmet>
 
 
@@ -137,14 +146,16 @@ function AboutUs() {
             <span className="city">Caldwell</span>, 
             <span className="city">Kuna</span>, 
             <span className="city">Star</span>, 
-            <span className="city">Middleton</span> & All Surrounding Areas
+            <span className="city">Eagle</span>, 
+            <span className="city">Middleton</span> & All Surrounding Areas 
+            <span className="city"> State of Idaho</span>
           </p>
 
-            </div>
-            <a href="tel:2085717073" className="call-now-button">
-              Call Now: (208) 571-7073
-            </a>
+          <Link to="/BookNow" className="call-now-button">
+          Book a Service!
+          </Link>
           </div>
+        </div>
         </div>
       </section>
 

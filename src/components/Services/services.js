@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Для иконок
 import { faLock, faKey, faCar, faShieldAlt, faWrench, faDoorOpen, faStar, faCheckCircle, faFan, faHammer ,faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
-import GoogleAnalytics from '../../utilites/GoogleAnalytics'; //  GoogleAnalytics(); 
+//import GoogleAnalytics from '../../utilites/GoogleAnalytics'; //  GoogleAnalytics(); 
 import avatar1 from '../../assets/avatar1.jpg';
 import avatar2 from '../../assets/avatar2.jpg';
 import avatar3 from '../../assets/avatar3.jpeg';
@@ -137,7 +137,7 @@ const advantagesList = [
 
 function Services() {
   useEffect(() => {
-    GoogleAnalytics(); // Вызов функции при монтировании компонента
+    //GoogleAnalytics(); // Вызов функции при монтировании компонента
   }, []);
   return (
     <div>
@@ -178,7 +178,16 @@ function Services() {
 
          {/* Google Analytics Tag */}
          
-        
+         {/* Google tag (gtag.js) */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16740926008"></script>
+  <script>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16740926008');
+    `}
+  </script>
       </Helmet>
       <Header /> {/* Вставляем Header */}
       <div className="services-container">
